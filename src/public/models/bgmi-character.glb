@@ -1,0 +1,12 @@
+loader.load(
+  '/models/bgmi-character.glb', // Place models in "public/models"
+  (gltf) => {
+    const character = gltf.scene;
+    character.scale.set(1.5, 1.5, 1.5);
+    scene.add(character);
+  },
+  undefined,
+  (error) => {
+    console.error('Error loading GLTF:', error);
+  }
+);
